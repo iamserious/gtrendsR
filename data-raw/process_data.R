@@ -76,7 +76,7 @@ get_countries <- function() {
                         destfile = destfile)
   
   usa <- readxl::read_excel(destfile, skip = 1)
-  usa <- na.omit(usa[, c(8, 10, 11)])
+  usa <- na.omit(usa[, c(11, 13, 14)])
   
   usa <- data.frame(
     country_code = "US",
