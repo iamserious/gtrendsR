@@ -125,16 +125,20 @@ gtrends <- function(
   # geo <- "US"
   
   gprop <- match.arg(gprop, several.ok = FALSE)
+  print(gprop)
   gprop <- ifelse(gprop == "web", "", gprop)
+  print(gprop)
   
   # ****************************************************************************
   # Request a token from Google
   # ****************************************************************************
   
   comparison_item <- data.frame(keyword, geo, time, stringsAsFactors = FALSE)
+  print(comparison_item)
+  
   
   widget <- get_widget(comparison_item, category, gprop)
-  
+  print(widget)
   # ****************************************************************************
   # Now that we have tokens, we can process the queries
   # ****************************************************************************
