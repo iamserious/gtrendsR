@@ -71,7 +71,7 @@ get_widget <- function(comparison_item, category, gprop) {
   
   widget <- curl::curl_fetch_memory(url)
   print(widget)
-  
+  print("------------------got tooken-------")
   stopifnot(widget$status_code == 200)
   
   myjs <- jsonlite::fromJSON(substring(rawToChar(widget$content), first = 6))
