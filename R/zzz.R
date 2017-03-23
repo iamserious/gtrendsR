@@ -82,14 +82,21 @@ get_widget <- function(comparison_item, category, gprop) {
 interest_over_time <- function(widget, comparison_item) {
   
   payload2 <- list()
+  print(payload2)
   payload2$locale <- widget$request$locale[1]
+  print(payload2)
   payload2$comparisonItem <- widget$request$comparisonItem[[1]]
+  print(payload2)
   payload2$resolution <- widget$request$resolution[1]
+  print(payload2)
   payload2$requestOptions$category <- widget$request$requestOptions$category[1]
+  print(payload2)
   payload2$requestOptions$backend <- widget$request$requestOptions$backend[1]
+  print(payload2)
   payload2$time <- widget$request$time[1]
+  print(payload2)
   payload2$requestOptions$property <- widget$request$requestOptions$property[1]
-  
+  print(payload2)
   
   url <- paste0(
     "https://www.google.fr/trends/api/widgetdata/multiline/csv?req=",
@@ -98,11 +105,16 @@ interest_over_time <- function(widget, comparison_item) {
     "&tz=360"
   )
   
+  print(url)
+  
+  
   # ****************************************************************************
   # Downoad the results
   # ****************************************************************************
   
   res <- curl::curl_fetch_memory(URLencode(url))
+  
+  rint(res)
   
   stopifnot(res$status_code == 200)
   
