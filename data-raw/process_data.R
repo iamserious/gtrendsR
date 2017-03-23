@@ -75,7 +75,7 @@ get_countries <- function() {
   file <- download.file("www.google.com/help/hc/downloads/ds3/Location-Language-Codes-AdWords.xlsx", 
                         destfile = destfile)
   
-  usa <- readxl::read_excel(destfile, skip = 1)
+  usa <- readxl::read_excel(destfile, skip = 2)
   usa <- na.omit(usa[, c(11, 13, 14)])
   
   usa <- data.frame(
