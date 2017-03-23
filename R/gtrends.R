@@ -96,12 +96,12 @@ gtrends <- function(
   )
   
   ## Check if valide geo
-  if (geo != "" &&
-      !all(geo %in% countries[, "country_code"]) &&
-      !all(geo %in% countries[, "sub_code"])) {
-    stop("Country code not valid. Please use 'data(countries)' to retreive valid codes.",
-         call. = FALSE)
-  }
+  # if (geo != "" &&
+  #     !all(geo %in% countries[, "country_code"]) &&
+  #     !all(geo %in% countries[, "sub_code"])) {
+  #   stop("Country code not valid. Please use 'data(countries)' to retreive valid codes.",
+  #        call. = FALSE)
+  # }
   
   ## Check if valide category
   if (!all(category %in% categories[, "id"]))  {
