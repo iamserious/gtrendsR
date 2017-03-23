@@ -114,7 +114,7 @@ interest_over_time <- function(widget, comparison_item) {
   
   res <- curl::curl_fetch_memory(URLencode(url))
   
-  rint(res)
+  print(res)
   
   stopifnot(res$status_code == 200)
   
